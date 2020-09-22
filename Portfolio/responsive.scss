@@ -1,0 +1,173 @@
+
+/*segmentación de estilos*/
+@import "variables";
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+body{
+    font-family: $font-primary;
+}
+
+// .background{
+//     z-index: -1;
+//     position: relative;
+//     clear: both;
+//     background-color: $color-primary;
+//     width: 100vw;
+//     height: 130vh;
+// }
+
+header{
+    display: block;
+    background-color: $color-primary;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    clear: both;
+    .hello{
+    position: absolute;
+    margin: 25vh 10vw 0 10vw;
+    width: 80%;
+    border-left: 6px solid $color-secondary;
+    height: 250px;
+    }
+    h1{
+        margin: 10px 3vw 1px 3vw;
+        color: $color-secondary;
+    }
+    h5{
+        @extend h1;
+        margin-top: 30px;
+        color: $color-contrast;
+    }
+    @media screen and (min-width: 400px){
+        .hello{
+        width: 60%;
+        }  
+        h1{
+            font-size: 64px;
+        }
+        h5{
+            font-size: 24px;
+        }
+        }
+ 
+
+}
+
+
+nav{
+    z-index: 500;
+    width: 100%;
+    height: 50px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: $color-primary;
+    text-align: right;
+    -webkit-box-shadow: 0px 4px 37px -21px rgba(79,79,79,0.36);
+    -moz-box-shadow: 0px 4px 37px -21px rgba(79,79,79,0.36);
+    box-shadow: 0px 4px 37px -21px rgba(79,79,79,0.36);
+@media screen and (max-width: 400px){
+    nav{
+        -webkit-box-shadow: 0px 4px 37px -21px rgba(79,79,79,0.0);
+        -moz-box-shadow: 0px 4px 37px -21px rgba(79,79,79,0.0);
+        box-shadow: 0px 4px 37px -21px rgba(79,79,79,0.0);    }
+    .navegacion { 
+        display: none;  
+        }    
+    .menu{
+        background-color: rgba(0, 129, 170, 0);
+        z-index: 600;
+        font-size: 30px;
+        color: $color-contrast;
+        text-align: right;
+        i{
+        margin: 30px 24px 0 0;
+        }
+    } 
+}
+}
+@media screen and (min-width: 400px){
+    nav {
+        .navegacion {
+            li{
+            display: inline-block;
+            padding: 30px;
+            text-align: right;
+        }
+        a{
+            color: $color-contrast;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: $color-secondary;
+            text-decoration-line: underline;
+        }
+        
+    }
+    .menu{
+        i{
+        display: none;
+        color: $color-primary;
+        }
+
+}
+
+        // a{
+        //     position: relative;
+        //     font-weight: 400;
+        //     color:#0E83CD;
+        // }
+
+        // }
+    }
+    }
+
+
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid $color-secondary; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: $color-secondary; }
+  }
+
+  .about{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      h1{
+          color: $color-contrast;
+          font-size: 24px;
+      }
+      p{
+        color: $color-secondary;
+        font-size: 18px;
+      }
+  }
